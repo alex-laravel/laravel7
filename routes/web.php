@@ -13,6 +13,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+/*
+ * Auth Routes
+ */
+Route::group(['namespace' => 'Auth', 'as' => 'auth.'], function () {
+    includeRouteFiles(__DIR__.'/Auth/');
+});
+
+/*
+ * Backend Routes
+ */
+Route::group(['namespace' => 'Backend', 'as' => 'backend.', 'prefix' => 'admin'], function () {
+    includeRouteFiles(__DIR__.'/Backend/');
+});
+
+/*
+ * Frontend Routes
+ */
+Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
+    includeRouteFiles(__DIR__.'/Frontend/');
+});
+
+/*
+ * Locale Routes
+ */
+Route::group(['namespace' => 'Locale', 'as' => 'locale.'], function () {
+    includeRouteFiles(__DIR__.'/Locale/');
 });
