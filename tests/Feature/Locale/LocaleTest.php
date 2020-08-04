@@ -13,6 +13,8 @@ class LocaleTest extends TestCase
     {
         $response = $this->get('/locale/en');
 
-        $response->assertStatus(200);
+        $response->assertStatus(302);
+        $response->assertRedirect('/');
+        $response->assertSessionHas('locale', 'en');
     }
 }

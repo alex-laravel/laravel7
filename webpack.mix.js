@@ -11,11 +11,18 @@ const mix = require('laravel-mix');
  |
  */
 
-mix
+mix.sass('resources/sass/auth/auth.scss', 'public/css/auth.css')
     .sass('resources/sass/frontend/frontend.scss', 'public/css/frontend.css')
     .sass('resources/sass/backend/backend.scss', 'public/css/backend.css')
+    .js('resources/js/auth/auth.js', 'public/js/auth.js')
     .js('resources/js/frontend/frontend.js', 'public/js/frontend.js')
     .js('resources/js/backend/backend.js', 'public/js/backend.js');
+
+mix.options({
+    terser: {
+        extractComments: false,
+    }
+});
 
 if (mix.inProduction()) {
     mix.version();

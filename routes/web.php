@@ -16,27 +16,27 @@ use Illuminate\Support\Facades\Route;
 /*
  * Auth Routes
  */
-Route::group(['namespace' => 'Auth', 'as' => 'auth.'], function () {
-    includeRouteFiles(__DIR__.'/Auth/');
+Route::group(['namespace' => 'Auth', 'as' => 'auth.', 'prefix' => 'auth'], function () {
+    includeRouteFiles(__DIR__ . '/Auth/');
 });
 
 /*
  * Backend Routes
  */
 Route::group(['namespace' => 'Backend', 'as' => 'backend.', 'prefix' => 'admin'], function () {
-    includeRouteFiles(__DIR__.'/Backend/');
+    includeRouteFiles(__DIR__ . '/Backend/');
 });
 
 /*
  * Frontend Routes
  */
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
-    includeRouteFiles(__DIR__.'/Frontend/');
+    includeRouteFiles(__DIR__ . '/Frontend/');
 });
 
 /*
  * Locale Routes
  */
 Route::group(['namespace' => 'Locale', 'as' => 'locale.'], function () {
-    includeRouteFiles(__DIR__.'/Locale/');
+    includeRouteFiles(__DIR__ . '/Locale/');
 });

@@ -1,6 +1,8 @@
 {
-    "/js/backend.js": "/js/backend.js?id=28dd7744814cebac9cc4",
-    "/js/frontend.js": "/js/frontend.js?id=c044f4e3e8bd87d8f131",
-    "/css/frontend.css": "/css/frontend.css?id=d41d8cd98f00b204e980",
-    "/css/backend.css": "/css/backend.css?id=d41d8cd98f00b204e980"
+    "/js/auth.js": "/js/auth.js?id=adb4a8fcde2d4348e714",
+    "/css/auth.css": "/css/auth.css?id=51e9f8d868430628be3c",
+    "/css/frontend.css": "/css/frontend.css?id=51e9f8d868430628be3c",
+    "/css/backend.css": "/css/backend.css?id=51e9f8d868430628be3c",
+    "/js/backend.js": "/js/backend.js?id=925961c3d8622b6acdad",
+    "/js/frontend.js": "/js/frontend.js?id=6de97c4f27e81683fa03"
 }
