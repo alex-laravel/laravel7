@@ -38,7 +38,7 @@ class UserEventSubscriber
      */
     public function onUserFailed(Failed $event)
     {
-        \Log::debug('User Failed: ' . $event->user->email);
+        \Log::debug('User Failed: ' . $event->credentials['email']);
     }
 
     /**
